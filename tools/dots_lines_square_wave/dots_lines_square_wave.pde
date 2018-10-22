@@ -20,9 +20,9 @@ int drawMode = 1;
 
 
 void setup() {
-  size(1080, 1320); //size should be multiple of img width and height
+  size(750, 750); //size should be multiple of img width and height
   smooth();
-  img = loadImage("pic100.png");
+  img = loadImage("radialW-3.png");
   println(img.width+" x "+img.height);
 }
 
@@ -34,8 +34,10 @@ void draw() {
   float mouseXFactor = map(mouseX, 0,width, 0.05,1);
   float mouseYFactor = map(mouseY, 0,height, 0.05,1);
 
-  for (int gridX = 0; gridX < img.width; gridX++) {
-    for (int gridY = 0; gridY < img.height; gridY++) {
+  
+
+  for (int gridX = 0; gridX < img.width; gridX += 2.75) {
+    for (int gridY = 0; gridY < img.height; gridY += 2.75) {
       // grid position + tile size
       float tileWidth = width / (float)img.width;
       float tileHeight = height / (float)img.height;
