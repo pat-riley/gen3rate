@@ -20,9 +20,9 @@ int drawMode = 1;
 
 
 void setup() {
-  size(750, 750); //size should be multiple of img width and height
+  size(500, 500); //size should be multiple of img width and height
   smooth();
-  img = loadImage("radialW-3.png");
+  img = loadImage("pic200.png");
   println(img.width+" x "+img.height);
 }
 
